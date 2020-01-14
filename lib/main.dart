@@ -11,7 +11,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  String _platformVersion = 'Unknown';
   String url = "http://31.128.79.192:8000/live";
 
   @override
@@ -31,47 +30,42 @@ class _MyAppState extends State<MyApp> {
     } else {
       stream.resume();
     }
-
   }
 
   @override
   Widget build(BuildContext context) {
-
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Plugin example app'),
-        ),
-        body: Center(
-            child: Column(
-          children: <Widget>[
-            new RaisedButton(
-              child: new Text("Start"),
-              onPressed: () {
-                callAudio("start");
-              },
+          body: Column(
+        children: <Widget>[
+          Flexible(
+            flex: 1,
+            child: Container(),
+          ),
+          Flexible(
+            flex: 2,
+            child: Card(
+              elevation: 10,
+              child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: <Widget>[
+                      Expanded(
+                        child: Image.asset(
+                          "assets/image/logo.png",
+                          fit: BoxFit.contain,
+                        ),
+                      ),
+                    ],
+                  )),
             ),
-            new RaisedButton(
-              child: new Text("Stop"),
-              onPressed: () {
-                callAudio("stop");
-              },
-            ),
-            new RaisedButton(
-              child: new Text("Pause"),
-              onPressed: () {
-                callAudio("pause");
-              },
-            ),
-            new RaisedButton(
-              child: new Text("Resume"),
-              onPressed: () {
-                callAudio("resume");
-              },
-            )
-          ],
-        )),
-      ),
+          ),
+          Flexible(
+            flex: 1,
+            child: Container(),
+          ),
+        ],
+      )),
     );
   }
 }
