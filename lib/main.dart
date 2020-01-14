@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
-import 'package:flutter/services.dart';
+
 import 'package:url_audio_stream/url_audio_stream.dart';
 
 void main() => runApp(MyApp());
@@ -31,6 +31,7 @@ class _MyAppState extends State<MyApp> {
     } else {
       stream.resume();
     }
+
   }
 
   @override
