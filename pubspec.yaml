@@ -1,23 +1,28 @@
-name: yedenradio
-description: Open Source Volunteers project for noncommercial radio, Yeden Radio! You are not alone!
+name: yedanradio
+description: A new Flutter application.
 
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.5.0 <3.0.0"
+  sdk: ">=2.1.0 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
 
+
   cupertino_icons: ^0.1.2
   url_audio_stream: ^1.0.0+3
   audio_service: ^0.5.7
   provider: ^4.0.1
+  just_audio: ^0.0.6
+  flutter_tts: ^0.8.5
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+
 
 flutter:
   uses-material-design: true
